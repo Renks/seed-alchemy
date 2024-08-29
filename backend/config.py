@@ -30,9 +30,14 @@ class Settings(BaseSettings):
     def __str__(self):
         return "\n".join(f"{key}={value}" for key, value in self.dict().items())
 
-
+revAnimated_v2_modelInfo = ModelInfo("storage/models/revAnimated_v2Rebirth.safetensors"
+    ,True
+    ,ModelType("checkpoint", Checkpoint)
+    ,BaseModelType("sd-1"))
 settings: Settings
-models: dict[str, ModelInfo] = {}  # Different namespace for each base model?
+models: dict[str, ModelInfo] = {
+    "revAnimatedV2" : revAnimated_v2_modelInfo
+}  # Different namespace for each base model?
 promptgen_models: dict[str, str] = {}
 
 
