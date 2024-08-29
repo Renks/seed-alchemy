@@ -11,9 +11,9 @@ from .types import ModelType, BaseModelType, ModelInfo
 
 class Settings(BaseSettings):
     users: list[str] = Field(default_factory=lambda: ["default"], split=",")
-    cache_path: str = ".cache"
+    cache_path: str = "storage/cache"
     storage_path: str = "storage"
-    models_path: Optional[str] = None
+    models_path: Optional[str] = "storage/models"
     huggingface_models: list[str] = Field(
         default_factory=lambda: [
             "checkpoint:sd-1:runwayml/stable-diffusion-v1-5",
@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     )
     install_control_net_v10: bool = False
     install_control_net_v11: bool = True
-    install_control_net_mediapipe_v2: bool = True
+    install_control_net_mediapipe_v2: bool = False
 
     def __str__(self):
         return "\n".join(f"{key}={value}" for key, value in self.dict().items())
