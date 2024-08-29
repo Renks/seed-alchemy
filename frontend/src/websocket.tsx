@@ -1,7 +1,7 @@
 import { stringify as uuidStringify } from "uuid";
 import { useEffect } from "react";
 import { stateSession } from "./store";
-import BACKEND_URL from "../vite.config"
+import BACKEND_URL from "./Constants"
 
 let ws: WebSocket | null = null;
 
