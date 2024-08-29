@@ -21,7 +21,7 @@ export const WebSocketComponent = () => {
       return;
     }
 
-    ws = new WebSocket("ws://localhost:8000/ws");
+    ws = new WebSocket("ws://ws");
     ws.binaryType = "arraybuffer";
 
     ws.onopen = () => {};

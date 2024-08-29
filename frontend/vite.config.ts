@@ -1,6 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+
+const BACKEND_URL = "https://13f7-34-125-33-191.ngrok-free.app/"
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -8,15 +11,15 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://127.0.0.1:8000/",
+        target: BACKEND_URL,
         changeOrigin: true,
       },
       "/images": {
-        target: "http://127.0.0.1:8000/",
+        target: BACKEND_URL,
         changeOrigin: true,
       },
       "/thumbnails": {
-        target: "http://127.0.0.1:8000/",
+        target: BACKEND_URL,
         changeOrigin: true,
       },
     },

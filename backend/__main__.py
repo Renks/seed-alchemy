@@ -8,10 +8,6 @@ import uvicorn
 import nest_asyncio
 from pyngrok import ngrok
 
-ngrok_tunnel = ngrok.connect(8000)
-print('Public URL:', ngrok_tunnel.public_url)
-nest_asyncio.apply()
-
 start_time = time.perf_counter()
 from .main import app
 
