@@ -18,8 +18,9 @@ function createWindow() {
     },
   });
 
-  const startUrl = isDev ? "http://localhost:5173" : "http://localhost:8000";
-
+  // const startUrl = isDev ? "http://localhost:5173" : "http://localhost:8000";
+  const startUrl = "http://localhost:5173";
+  
   win.loadURL(startUrl);
 
   win.on("close", () => {
