@@ -1,6 +1,7 @@
 import { stringify as uuidStringify } from "uuid";
 import { useEffect } from "react";
 import { stateSession } from "./store";
+import BACKEND_URL from "../vite.config"
 
 let ws: WebSocket | null = null;
 
@@ -21,7 +22,7 @@ export const WebSocketComponent = () => {
       return;
     }
 
-    ws = new WebSocket("ws://ws");
+    ws = new WebSocket(`${BACKEND_URL}/ws`);
     ws.binaryType = "arraybuffer";
 
     ws.onopen = () => {};

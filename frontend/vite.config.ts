@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 
-const BACKEND_URL = "https://13f7-34-125-33-191.ngrok-free.app/"
+export const BACKEND_URL = ""
 
 // https://vitejs.dev/config/
 export default defineConfig({

@@ -11,7 +11,7 @@ from .types import ModelType, BaseModelType, ModelInfo
 
 class Settings(BaseSettings):
     users: list[str] = Field(default_factory=lambda: ["default"], split=",")
-    cache_path: str = "~/.cache"
+    cache_path: str = ".cache"
     storage_path: str = "storage"
     models_path: Optional[str] = None
     huggingface_models: list[str] = Field(
